@@ -1,7 +1,7 @@
 # Notes
 
 > IJS: [https://javascript-conference.com/angular/custom-angular-libraries/](https://javascript-conference.com/angular/custom-angular-libraries/)
-repo: [https://github.com/buildmotion/ijs-custom-angular-libraries.git](https://github.com/buildmotion/ijs-custom-angular-libraries.git)
+> repo: [https://github.com/buildmotion/ijs-custom-angular-libraries.git](https://github.com/buildmotion/ijs-custom-angular-libraries.git)
 
 Complete Guide on creating custom distributed/shared libraries for Angular Applications.
 
@@ -13,3 +13,9 @@ You will learn strategies for organizing your code using Angular libraries and h
 - How to structure application for code reuse.
 - Managing Custom Libraries versions.
 - Details on how to publish locally and to NPM.
+
+## Embed
+
+```html
+<iframe width='160' height='400' src='https://leanpub.com/angular-libraries-the-complete-guide/embed' frameborder='0' allowtransparency='true'></iframe>
+```
