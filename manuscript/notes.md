@@ -19,3 +19,9 @@ You will learn strategies for organizing your code using Angular libraries and h
 ```html
 <iframe width='160' height='400' src='https://leanpub.com/angular-libraries-the-complete-guide/embed' frameborder='0' allowtransparency='true'></iframe>
 ```
+
+## Show the How with Examples
+
+> Just do not show the cake -show how it was made. Step-by-step flow of one of the items/workflows to demonstrate the process (65% of US are visual learner, need to see information in order to retain it)
+>
+> - Most people process information based on what they see
