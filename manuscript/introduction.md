@@ -1,5 +1,7 @@
 # Introduction
 
+Tell a story about an application. 
+
 ## Billion Dollar Mistake
 
 Mistakes happen, right? Do we learn from our mistakes when they do? Some of us do - those that care.
