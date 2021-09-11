@@ -25,3 +25,33 @@ You will learn strategies for organizing your code using Angular libraries and h
 > Just do not show the cake -show how it was made. Step-by-step flow of one of the items/workflows to demonstrate the process (65% of US are visual learner, need to see information in order to retain it)
 >
 > - Most people process information based on what they see
+
+## Step-by-Step vs. The Science Behind
+
+> Explain the principles behind the step-by-step instructions
+
+- knowing
+- understanding
+- application/execution (doing)
+  - practice
+  - repetition of the right things
+  - muscle-memory
+
+### Explain the Why
+
+## Story
+
+- had to build (6) Angular applications within a 1-year period
+  - dashboard reporting and analytics
+  - device management
+  - device testing and metrics
+  - video training system
+  - license adminstration tool
+  - client license server
+- team
+  - small, new members, new domain
+- data
+  - about 150 database tables, pristine database and schema(s)
+- integrate and work with medical devices
+- all applications had to work on delivery - no exceptions
+  - install and configure at client clinics and hospitals
