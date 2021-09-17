@@ -24,34 +24,24 @@
 
 ## Shared UI Components
 
-### Banner
-
-### Growl
-
-### Toaster
-
-### Modal
-
-### Notifiers
-
-### Directives
-
-### Pipes
+- Banner
+- Growl
+- Toaster
+- Modal
+- Notifiers
+- Directives
+- Pipes
 
 ## Cross-Cutting Concern (Infrastructure)
 
-### Configuration
-
-### Error Handling
-
-### Logging
-
-### HTTP Service
-
-### Notifications
-
+| Library        | Description |
+| -------------- | ----------- |
+| Configuration  |             |
+| Error Handling |             |
+| Logging        |             |
+| HTTP Service   |             |
+| Notifications  |             |
 ## Foundational
-
 ### ComponentBase
 
 ### ServiceBase

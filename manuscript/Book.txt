@@ -1,4 +1,5 @@
 introduction.md
+what-are-angular-libs.md
 angular-library-types.md
 identify-candidates.md
 creating-custom-libraries.md
