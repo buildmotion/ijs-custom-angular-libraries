@@ -349,7 +349,7 @@ Here is the new folder structure for the library project. The library schematic 
 }
 ```
 
-### Build Library
+### Build Library (default non-prod)
 
 ```ts
 ng build errorHandler            
@@ -414,3 +414,54 @@ The output of files in the `angular-workspace/dist/error-handler` folder.
 └── README.md
 ```
 
+### Build with `--prod`
+
+```
+ng build errorHandler --prod                  
+Building Angular Package
+
+------------------------------------------------------------------------------
+Building entry point 'error-handler'
+------------------------------------------------------------------------------
+✔ Compiling TypeScript sources through NGC
+✔ Bundling to FESM2015
+✔ Bundling to UMD
+✔ Minifying UMD bundle
+✔ Writing package metadata
+ℹ Built error-handler
+
+------------------------------------------------------------------------------
+Built Angular Package
+ - from: /Users/user/work/github/ijs-custom-angular-libraries/angular-workspace/projects/error-handler
+ - to:   /Users/user/work/github/ijs-custom-angular-libraries/angular-workspace/dist/error-handler
+------------------------------------------------------------------------------
+```
+
+The `--prod` build omits the `.map` files from the `lib` folder.
+
+```txt
+├── bundles
+│   ├── error-handler.umd.js
+│   ├── error-handler.umd.js.map
+│   ├── error-handler.umd.min.js
+│   └── error-handler.umd.min.js.map
+├── esm2015
+│   ├── lib
+│   │   ├── error-handler.component.js
+│   │   ├── error-handler.module.js
+│   │   └── error-handler.service.js
+│   ├── error-handler.js
+│   └── public-api.js
+├── fesm2015
+│   ├── error-handler.js
+│   └── error-handler.js.map
+├── lib
+│   ├── error-handler.component.d.ts
+│   ├── error-handler.module.d.ts
+│   └── error-handler.service.d.ts
+├── error-handler.d.ts
+├── error-handler.metadata.json
+├── package.json
+├── public-api.d.ts
+└── README.md
+```

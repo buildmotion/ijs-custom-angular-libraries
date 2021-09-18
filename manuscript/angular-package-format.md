@@ -53,6 +53,8 @@
   - support for different build artifacts
   - public API entry point
 
+> Currenty [ng-packagr](https://github.com/ng-packagr/ng-packagr) is a separate project/package that is a `peerDependency` for the Angular `@angular-devkit/build-angular` package.
+
 ## December 7, 2017
 
 [Packaging Angular Libraries](https://webcache.googleusercontent.com/search?q=cache:oCwT53Rek0IJ:https://manuel-rauber.com/2017/12/06/packaging-angular-libraries/+&cd=3&hl=en&ct=clnk&gl=us) by Manuel Rauber ([@ManuelRauber](https://twitter.com/ManuelRauber))
@@ -88,3 +90,11 @@
   - see: https://github.com/jasonaden/angular-cli-lib-example
 
 > David: "The future is (Angular) version 6...fingers crossed that we make it and get ng-packagr into version 6 of Angular and the CLI."
+
+## May 6, 2020
+
+[Angular Package Format (APF) v10.0](https://docs.google.com/document/d/1uh2D6XqaGh2yjjXwfF4SrJqWl1MBhMPntlNBBsk6rbw/edit#heading=h.k0mh3o8u5hx)
+
+## April 15, 2021
+
+[Angular Package Format (APF) v12.0](https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/preview#heading=h.k0mh3o8u5hx)
