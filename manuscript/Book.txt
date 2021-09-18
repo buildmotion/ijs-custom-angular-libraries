@@ -6,4 +6,5 @@ creating-custom-libraries.md
 publishing-and-distributing-libraries.md
 workspace-structure-for-code-reuse.md
 code-organization-with-libraries.md
+angular-package-format.md
 resources.md
