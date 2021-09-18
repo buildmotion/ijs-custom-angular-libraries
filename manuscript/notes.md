@@ -1,5 +1,8 @@
 # Notes
 
+git config --global user.name "Matt Vaughn"
+git config --global user.email matt.vaughn@buildmotion.com
+
 > [Angular Package Format](https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/mobilebasic)
 > IJS: [https://javascript-conference.com/angular/custom-angular-libraries/](https://javascript-conference.com/angular/custom-angular-libraries/)
 > repo: [https://github.com/buildmotion/ijs-custom-angular-libraries.git](https://github.com/buildmotion/ijs-custom-angular-libraries.git)
