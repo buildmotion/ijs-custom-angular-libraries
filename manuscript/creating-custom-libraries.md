@@ -487,10 +487,11 @@ npm ERR!     /Users/user/.npm/_logs/2021-09-18T04_26_59_995Z-debug.log
 user@buildmotion-pro angular-workspace % 
 ```
 
-### Fix 3: TSConfig with `enableIvy": false`
+### Fix 3: TSConfig with `"enableIvy": false`
 
-Add and set the `enableIvy` attribute of the `angularCompilerOptions` to *false*.
+Add and set the `enableIvy` attribute of the `angularCompilerOptions` to *false* - in the `projects/error-handler/tsconfig.lib.json` file.
 
+*projects/error-handler/tsconfig.lib.json*
 ```json
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,
@@ -564,6 +565,107 @@ npm notice unpacked size: 19.7 kB
 npm notice shasum:        a406cff279c3971a8c74baa0c10ff86ff3dc28c8
 npm notice integrity:     sha512-tWrd3/ezjvOhD[...]V9DLTFc+aPJYg==
 npm notice total files:   24                                      
+npm notice 
+npm ERR! code ENEEDAUTH
+npm ERR! need auth This command requires you to be logged in.
+npm ERR! need auth You need to authorize this machine using `npm adduser`
+```
+
+### Fix 4: TSConfig with `"compilationMode": "partial"`
+
+> Angular.io :: See [Transitioning libraries to partial-Ivy format](https://angular.io/guide/creating-libraries#transitioning-libraries-to-partial-ivy-format)
+
+1. remove the `enableIvy`
+2. add `compilationMode` with a value of `partial`
+
+![compilationMode](resources/compilation-mode.png)
+
+The `angularCompilerOptions` section in the `projects/error-handler/tsconfig.lib.json` should look like this:
+
+```json
+"angularCompilerOptions": {
+  "skipTemplateCodegen": true,
+  "strictMetadataEmit": true,
+  "enableResourceInlining": true,
+  "compilationMode": "partial"
+},
+```
+
+Directly from the Angular documentation: 
+
+> For publishing to npm use the partial-Ivy format as it is stable between patch versions of Angular.
+> 
+> Avoid compiling libraries with full-Ivy code if you are publishing to npm because the generated Ivy instructions are not part of Angular's public API, and so might change between patch versions.
+> 
+> Partial-Ivy code is not backward compatible with View Engine. If you use the library in a View Engine application, you must compile the library into the View Engine format by setting "enableIvy": false in the tsconfig.json file.
+> 
+> Ivy applications can still consume the View Engine format because the Angular compatibility compiler, or ngcc, can convert it to Ivy.
+
+#### Build the Package
+
+Use the `ng build errorHandler` CLI command to build the library.
+
+```ts
+ng build errorHandler
+Building Angular Package
+******************************************************************************
+It is not recommended to publish Ivy libraries to NPM repositories.
+Read more here: https://v9.angular.io/guide/ivy#maintaining-library-compatibility
+******************************************************************************
+
+------------------------------------------------------------------------------
+Building entry point 'error-handler'
+------------------------------------------------------------------------------
+✔ Compiling TypeScript sources through NGC
+⠋ Bundling to FESM2015(node:10260) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./" in the "exports" field module resolution of the package at /Users/user/work/github/ijs-custom-angular-libraries/angular-workspace/node_modules/tslib/package.json.
+Update this package.json to use a subpath pattern like "./*".
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Bundling to FESM2015
+✔ Bundling to UMD
+✔ Minifying UMD bundle
+✔ Writing package metadata
+ℹ Built error-handler
+
+------------------------------------------------------------------------------
+Built Angular Package
+ - from: /Users/user/work/github/ijs-custom-angular-libraries/angular-workspace/projects/error-handler
+ - to:   /Users/user/work/github/ijs-custom-angular-libraries/angular-workspace/dist/error-handler
+------------------------------------------------------------------------------
+```
+
+#### Publish
+
+Open the `projects/error-handler` path in terminal and run the `npm publish` command.
+
+```ts
+npm publish
+npm notice 
+npm notice 📦  error-handler@0.0.1
+npm notice === Tarball Contents === 
+npm notice 1.0kB README.md                              
+npm notice 1.4kB karma.conf.js                          
+npm notice 162B  ng-package.json                        
+npm notice 194B  package.json                           
+npm notice 669B  src/lib/error-handler.component.spec.ts
+npm notice 284B  src/lib/error-handler.component.ts     
+npm notice 273B  src/lib/error-handler.module.ts        
+npm notice 388B  src/lib/error-handler.service.spec.ts  
+npm notice 141B  src/lib/error-handler.service.ts       
+npm notice 183B  src/public-api.ts                      
+npm notice 781B  src/test.ts                            
+npm notice 574B  tsconfig.lib.json                      
+npm notice 230B  tsconfig.lib.prod.json                 
+npm notice 309B  tsconfig.spec.json                     
+npm notice 247B  tslint.json                            
+npm notice === Tarball Details === 
+npm notice name:          error-handler                           
+npm notice version:       0.0.1                                   
+npm notice filename:      error-handler-0.0.1.tgz                 
+npm notice package size:  3.0 kB                                  
+npm notice unpacked size: 6.9 kB                                  
+npm notice shasum:        8194f8c2a7663a6c9a22fb6c3c95f38487ff3c60
+npm notice integrity:     sha512-bITpnjgPUDJ/R[...]9auU1nEMZiBQw==
+npm notice total files:   15                                      
 npm notice 
 npm ERR! code ENEEDAUTH
 npm ERR! need auth This command requires you to be logged in.
