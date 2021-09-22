@@ -1,9 +1,15 @@
-import { Injectable } from '@angular/core';
+import { ErrorHandler, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ErrorHandlerService {
+export class ErrorHandlerService implements ErrorHandler {
 
-  constructor() { }
+  constructor(
+    // consider injecting a logging service here;
+  ) { }
+
+  handleError(error: any): void {
+    console.error(error); // really? you'll want to do much more than this, right?
+  }
 }
