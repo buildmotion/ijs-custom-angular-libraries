@@ -10,6 +10,6 @@ export class ErrorHandlerService implements ErrorHandler {
   ) { }
 
   handleError(error: any): void {
-    console.error(error); // really? you'll want to do much more than this, right?
+    console.error(`ErrorHandlerService: ${error}`); // really? you'll want to do much more than this, right?
   }
 }
