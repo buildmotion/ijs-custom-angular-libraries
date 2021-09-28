@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'portal';
   constructor() {
-    throw new Error('Hi.');
+
+  }
+
+  throwError() {
+    throw new Error('Hello error...');
   }
 }

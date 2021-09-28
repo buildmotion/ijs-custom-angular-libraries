@@ -465,3 +465,11 @@ The `--prod` build omits the `.map` files from the `lib` folder.
 ├── public-api.d.ts
 └── README.md
 ```
+
+## CLI Command Recap
+
+```ts
+ng new angular-workspace --create-application-false
+ng generate library error-handler
+ng build errorHandler
+```
