@@ -1,8 +1,11 @@
 introduction.md
+what-are-angular-libs.md
 angular-library-types.md
 identify-candidates.md
 creating-custom-libraries.md
 publishing-and-distributing-libraries.md
+nx-workspace.md
 workspace-structure-for-code-reuse.md
 code-organization-with-libraries.md
+angular-package-format.md
 resources.md

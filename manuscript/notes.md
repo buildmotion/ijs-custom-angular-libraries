@@ -1,5 +1,11 @@
 # Notes
 
+> Coupon: https://leanpub.com/angular-libraries-the-complete-guide/c/8nQNr6edi8t3
+
+git config --global user.name "Matt Vaughn"
+git config --global user.email matt.vaughn@buildmotion.com
+
+> [Angular Package Format](https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/mobilebasic)
 > IJS: [https://javascript-conference.com/angular/custom-angular-libraries/](https://javascript-conference.com/angular/custom-angular-libraries/)
 > repo: [https://github.com/buildmotion/ijs-custom-angular-libraries.git](https://github.com/buildmotion/ijs-custom-angular-libraries.git)
 
@@ -25,3 +31,33 @@ You will learn strategies for organizing your code using Angular libraries and h
 > Just do not show the cake -show how it was made. Step-by-step flow of one of the items/workflows to demonstrate the process (65% of US are visual learner, need to see information in order to retain it)
 >
 > - Most people process information based on what they see
+
+## Step-by-Step vs. The Science Behind
+
+> Explain the principles behind the step-by-step instructions
+
+- knowing
+- understanding
+- application/execution (doing)
+  - practice
+  - repetition of the right things
+  - muscle-memory
+
+### Explain the Why
+
+## Story
+
+- had to build (6) Angular applications within a 1-year period
+  - dashboard reporting and analytics
+  - device management
+  - device testing and metrics
+  - video training system
+  - license adminstration tool
+  - client license server
+- team
+  - small, new members, new domain
+- data
+  - about 150 database tables, pristine database and schema(s)
+- integrate and work with medical devices
+- all applications had to work on delivery - no exceptions
+  - install and configure at client clinics and hospitals
