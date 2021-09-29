@@ -11,6 +11,6 @@ export class AppComponent {
   }
 
   throwError() {
-    throw new Error('Hello error...');
+    throw new Error('A little bug caused an unexpected problem here, oh no!');
   }
 }

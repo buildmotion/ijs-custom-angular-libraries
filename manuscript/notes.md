@@ -1,5 +1,7 @@
 # Notes
 
+> Coupon: https://leanpub.com/angular-libraries-the-complete-guide/c/8nQNr6edi8t3
+
 git config --global user.name "Matt Vaughn"
 git config --global user.email matt.vaughn@buildmotion.com
 

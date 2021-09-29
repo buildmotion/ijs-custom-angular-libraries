@@ -8,6 +8,11 @@ One of the main reasons to create a custom library is to make it available to th
 
 ## Publishing to NPM
 
+> 1. create an account https://npmjs.com
+> 2. create and build your library (i.e., pacakge)
+> 3. go to the dist folder and login: `npm login`
+> 4. use the `npm publish` command to publish the package
+
 ```json
 {
   "name": "error-handler",
@@ -31,6 +36,47 @@ One of the main reasons to create a custom library is to make it available to th
   }
 }
 ```
+
+### Update the Package.json
+
+- version
+- description
+- author
+- license
+- repository
+
+```json
+  
+{
+  "name": "@angular/core",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "Angular - the core framework",
+  "author": "angular",
+  "license": "MIT",
+  "engines": {
+    "node": "^12.14.1 || >=14.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "rxjs": "^6.5.3 || ^7.0.0",
+    "zone.js": "~0.11.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular/angular.git",
+    "directory": "packages/core"
+  },
+  "ng-update": {
+    "migrations": "./schematics/migrations.json",
+    "packageGroup": "NG_UPDATE_PACKAGE_GROUP"
+  },
+  "sideEffects": false
+}
+```
+
+## Building and Publishing Libraries
 
 > Workaround: [Deploying Angular # ivy packages](https://szoradi-balazs.medium.com/deploying-angular-9-ivy-packages-bae9841e665c)
 
