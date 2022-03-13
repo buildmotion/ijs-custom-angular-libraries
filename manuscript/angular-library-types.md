@@ -1,10 +1,18 @@
 # Angular Library Types
 
- The new project type *library* is generic enough for you to create almost any type of library that you deem necessary to organize your code, to share and reuse the library with other applications. There are no rules as to the type of library project that you create for your solution. Generally speaking though, you should create an organize the contents of your library to be specific to a single purpose. This follows the single responsibility rule and allows you to organize and group related things into a single library.
+The new project type *library* is generic enough for you to create almost any type of library that you deem necessary to organize your code, to share and reuse the library with other applications. There are no rules as to the type of library project that you create for your solution. Generally speaking though, you should create an organize the contents of your library to be specific to a single purpose. This follows the single responsibility rule and allows you to organize and group related things into a single library.
 
-  A good example of this is the Material Design packages for Angular. Initially all of the components for Material Design were contained in a single module. This might've seemed like a good design and way to publish an entire library of Angular Material components. However,  this meant that if you wanted to use one or a few Angular Material components you had to import *all* of the components that were contained in this module. This would definitely increase the size of the JavaScript bundles during the output of the build process. Later a decision was made to create a package for each component within the Angular Material Design.
+## Code Organization
 
-   Now we can import only the specific components using a module import for the specific features that we are working on. However, I do see some developers create a shared module to import all of the Material component modules as a convenience for the application. You should avoid doing this. For more information, please see this great article, ["Stop Using Shared Material Module"](https://indepth.dev/posts/1191/stop-using-shared-material-module) by Santosh Yadav ([@SantoshYadavDev](https://twitter.com/@SantoshYadavDev)).
+// FIXME: ADD MORE CONTENT HERE; WHY?
+
+- encapsulation: some things are exposed to consumers while others are hidden or encapsulated within the library.
+
+## Material Design :: Library Examples
+
+A good example of this is the Material Design packages for Angular. Initially all of the components for Material Design were contained in a single module. This might've seemed like a good design and way to publish an entire library of Angular Material components. However,  this meant that if you wanted to use one or a few Angular Material components you had to import *all* of the components that were contained in this module. This would definitely increase the size of the JavaScript bundles during the output of the build process. Later a decision was made to create a package for each component within the Angular Material Design.
+
+Now we can import only the specific components using a module import for the specific features that we are working on. However, I do see some developers create a shared module to import all of the Material component modules as a convenience for the application. You should avoid doing this. For more information, please see this great article, ["Stop Using Shared Material Module"](https://indepth.dev/posts/1191/stop-using-shared-material-module) by Santosh Yadav ([@SantoshYadavDev](https://twitter.com/@SantoshYadavDev)).
 
 ## Shared UI Components
 
@@ -20,7 +28,7 @@ For example, you might have a *pipe* that formats numbers or dates that is speci
 - Notifiers
 - Directives
 - Pipes
-  
+
 ## Cross-Cutting Concerns (Infrastructure)
 
 As we work on different projects in different applications, you will find that there are many common or shared non-functional features of the application. Many times these are referred to as cross-cutting concerns. A cross-cutting concern is something that the application will use throughout the different layers or even the different vertical boundaries or features of your application.
@@ -46,7 +54,7 @@ The following table provides some common cross-cutting concerns that you might w
 
 Some modern web architectures are now taking advantage of library projects to encapsulate UI features as libraries. In this scenario, you will have a shell application that will lazy-load a UI feature module from the library when a route is activated. This is a good code organization technique for Angular projects. In fact for enterprise Angular projects, the [Nx.dev](https://nx.dev/) team at [Nrwl.io](https://nrwl.io/) recommends using this architectural approach.
 
- You can create a UI feature library for each of the vertical features within your application. This approach has the added advantage of being able to reuse any of these UI features in other applications as well. Here is a lit of a typical e-commerce application's feature UI libraries.
+You can create a UI feature library for each of the vertical features within your application. This approach has the added advantage of being able to reuse any of these UI features in other applications as well. Here is a lit of a typical e-commerce application's feature UI libraries.
 
 - products-ui
 - orders-ui
@@ -57,7 +65,7 @@ Some modern web architectures are now taking advantage of library projects to en
 
 A ***domain service*** library can be used to contain the business logic for a specific feature of your application. This library will encapsulates all of the business logic for a feature. It will provide an entry-point to consumers of the library as an injectable service.
 
- The following is a list of potential domain service libraries for a fictitious clinical application.
+The following is a list of potential domain service libraries for a fictitious clinical application.
 
 - Accounts
 - Appointments
