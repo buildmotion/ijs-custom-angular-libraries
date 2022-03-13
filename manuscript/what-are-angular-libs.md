@@ -1,6 +1,6 @@
 # What Are Angular Libraries?
 
-An Angular ***library*** is just a module or a collection of things that can be consumed by multiple projects. One of the main reasons that library projects are not used frequently in Angular solutions is that there's not a lot of guidance on what kind of libraries to create and how they can be used in an application.
+An Angular ***library*** is just a module or a collection of things that can be consumed by multiple projects.
 
  > [Wikipedia](https://en.wikipedia.org/wiki/Library_(computing)): A library is also a collection of implementations of behavior, written in terms of a language, that has a well-defined interface by which the behavior is invoked... Library code is organized in such a way that it can be ***used by multiple programs***... The ***value*** of a library lies in the reuse of standardized program elements.
 
@@ -14,3 +14,4 @@ An Angular ***library*** is just a module or a collection of things that can be 
 
  > Build once, use many.
 
+One of the main reasons that library projects are not used frequently in Angular solutions is that there's not a lot of guidance on what kind of libraries to create and how they can be used in an application.
